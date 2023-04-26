@@ -1,0 +1,422 @@
+.header{
+    background:linear-gradient(rgba(38, 103, 216, 0.59), transparent),
+    linear-gradient(transparent, rgb(0, 91, 128)),
+                         url('../photos/04.jpg') no-repeat center;
+    height: 780px;
+}
+/* linear-gradient(0deg, rgb(68, 95, 227),10%, transparent )
+linear-gradient(to top, lime, 20%, cyan) */
+
+*{
+    box-sizing: border-box;
+}
+
+.text-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    background-color: rgba(38, 103, 216, 0);
+}
+
+h1{
+    font-size: 4rem !important;
+}
+
+h3{
+    font-size: 2.2rem !important;
+}
+
+.p-2{
+    display: inline;
+    max-width:30%;
+}
+
+.card-body{
+}
+
+.col-lg-3{
+    margin: 5px 20px;
+}
+
+/* .card-body{
+    height: 354px;
+}
+
+@media(min-width:800px){
+    .card-body{
+        height: 330px;
+    }
+}
+
+@media(min-width:372px){
+    .card-body{
+        height: 259px;
+    }
+}
+
+
+.card-body{
+    height: 390px;
+} */
+
+.card{
+    border: none !important;
+}
+
+
+.mt-auto{
+     margin-top: auto;
+ }
+
+ .view-site-button{
+    display: block;
+     width: 100%;
+ }
+
+ footer{
+     background-color: rgba(0, 22, 82, 0.777);
+     display: block;
+     width: 100vw;
+     padding: 20px;
+ }
+
+
+ .footer-text{
+     margin-left: 40px;
+     margin-bottom:0;
+ }
+
+ .social-link{
+     margin-left:auto;
+     margin-right: 40px;
+ }
+
+ .about{
+     margin: 30px 0 30px;
+ }
+
+ @media(min-width:768px){
+     .ml{
+     margin-left: 10px;
+ }
+ .about{
+    width:60vw !important;
+}
+}
+h4,.modal-skills p{
+    margin-left:13px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.overlay-text{
+        opacity:0;
+        background-color:rgba(141, 141, 141, 0.329);
+}
+.overlay-text:hover{
+    transition: 0.5s opacity ease-in;
+    opacity: 0.8;
+}
+
+
+
+.project-container{
+    display: flex;
+}
+
+.background-gray{
+    background-color: rgb(243, 243, 243);
+    border-radius: 6px;
+    padding: 8px 5px;
+}
+
+#home{
+    position: fixed;
+    width: 100vw;
+    z-index: 300;
+}
+button:hover,
+.background-gray:hover{
+    cursor: pointer;
+}
+
+
+
+.card-img-top:hover{
+    border: 1px rgb(201, 201, 201) solid;
+}
+
+
+.overlay-text,
+.card-img-top{
+    /* border-radius: 10px; */
+}
+
+button{
+    color:rgb(25, 0, 255);
+}
+
+
+.background-white{
+    background-color:white;
+    border-radius: 10px;
+}
+
+.background-black{
+    background-color: black;
+    color:white;
+    
+    border-radius: 10px;
+}
+
+.hide{
+    width:0;
+    height:0;
+}
+
+
+
+
+
+
+
+
+
+
+.notifications {
+    display: inline-block;
+}
+
+.notifications {
+    transition: background-color 1s ease-in-out;
+    margin: 10px;
+}
+
+.notifications {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(172, 172, 172);
+    border-radius: 35px;
+    margin-left: 0;
+}
+
+
+
+.notifications::before {
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+    transition: transform 1s ease-in-out;
+}
+
+
+
+#switch{
+    opacity: 0;
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+
+
+.label {
+    height: 40px;
+}
+
+
+
+.notifications{
+    transition: background-color 1s ease-in-out;
+    margin: 10px;
+}
+input:checked + .notifications:before{
+    transform: translateX(50px);
+}
+
+input:checked + .notifications{
+    background-color: rgb(82, 82, 165);
+}
+
+#switch{
+    opacity:0;
+    position: relative;
+    width:0;
+    height:0;
+}
+
+.notifications .on{
+    position: absolute;
+    margin-left:5px;
+    display: none;
+    color: white;
+    margin-top: 3px;
+}
+.notifications .off{
+    position: absolute;
+    margin-left: 40px;
+    display: inline;
+    color:white;
+    margin-top: 3px;
+}
+
+
+input:checked + .notifications .on{
+    display: inline;
+    color: white;
+}
+
+input:checked + .notifications .off{
+    display: none;
+    color: white;
+}
+
+
+.dark-mode{
+    margin-right: auto;
+    margin-bottom: 0;
+    height: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* .save{
+    display: block;
+    width: 80%;
+    margin: auto;
+} */
+
+.setting{
+    width: 60%;
+    margin: auto;
+}
+
+.save,
+.cancel{
+    width: 60vw;
+}
+
+@media(min-width: 768px){
+    .save,
+    .cancel{
+        width: 30vw;
+    }
+
+
+}
+
+.img-container{
+    padding: 20px;
+}
+
+@media(max-width: 768px){
+    .about-contact{
+        flex-direction: column;
+    }
+}
+
+.github:hover{
+    fill: gray;
+    cursor: pointer;
+}
+
+
+body{
+    background: linear-gradient(rgb(1, 146, 204) -18%, rgb(0, 19, 28)) !important;
+    color:white !important;
+    /* background-color: rgb(0, 91, 128) !important; */
+}
+
+.arrow{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+button{
+    outline: none;
+}
+
+
+img{
+    margin:10px;
+}
+
+
+.img-fluid{
+    height: 40%;
+    width:auto;
+    transition: transform 0.5s;
+}
+
+.img-fluid:hover{
+    transform: scale(1.05);
+}
+
+
+.gallery{
+    margin: 50px;
+}
+
+#projects{
+    margin-top:100px;
+}
+
+.green{
+    background-color: green !important;
+    margin-left:auto;
+}
+
+.chart{
+    width: 70%;
+    margin:auto;
+    margin-top:100px;
+}
+
+
+
+@font-face {
+    font-family: Biko;
+    src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
+  }
+
+  .bg-video { 
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+  }
+  .bg-video video { width: 100%; }
+  svg { 
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0; // needed for FF, Safari, Edge
+    height: 100%;
+  }
+  svg text {
+    font-family: Biko, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 38px;
+  }
+  svg rect {
+    fill: white;
+  }
+  svg > rect {
+      -webkit-mask: url(#mask);
+      mask: url(#mask);
+  }

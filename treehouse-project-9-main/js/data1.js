@@ -79,13 +79,15 @@ new Chart(document.getElementById("chart"), {
         {
           label: "Pollution (millions of tonnes)",
           backgroundColor: "seagreen",
-          data: Pollution
+          data: Pollution,
+          backgroundColor: '#9BD0F5',
+
         }
       ]
     },
     options: {
       title: {
-        display: true,
+        display: false,
         text: 'Plastic in the Ocean'
       },
 
@@ -100,9 +102,16 @@ new Chart(document.getElementById("chart"), {
           scaleLabel: {
             display: true,
             labelString: 'Year'
+          },
+          ticks: {
+            autoSkip:true
           }
         }]
       }
       
     }
   });
+
+Chart.defaults.global.defaultFontColor = "rgb(199, 199, 199)";
+
+

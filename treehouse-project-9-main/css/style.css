@@ -14,7 +14,7 @@
  }
 
  footer{
-     background-color: rgba(0, 22, 82, 0.777);
+     background-color: rgba(4, 34, 118, 0.777);
      display: block;
      /* width: 100vw; */
      padding: 20px;
@@ -34,7 +34,7 @@
 body{
     background: linear-gradient(rgb(111, 214, 255), rgb(0, 19, 28)) !important;
     /* background:no-repeat !important; */
-    color:rgb(130, 205, 255) !important;
+    color:rgb(0, 0, 0) !important;
     /* background-color: rgb(0, 91, 128) !important; */
 }
 
@@ -157,13 +157,7 @@ img{
     border-radius: 10px;
 }
 .stat{
-    background-color: rgba(0, 22, 82, 0.777);
-}
-
-
-
-
-.stat{
+    background-color: rgba(45, 82, 183, 0.58);
     border-radius:10px;
     margin-bottom:10px;
     padding:10px;
@@ -179,10 +173,10 @@ img{
 }
 
 .st{
-    margin:30px;
     /* background-color:rgba(95, 95, 192, 0.372); */
     border-radius:10px;
     padding:10px;
+    margin:10px;
 }
 
 .question-container{
@@ -353,7 +347,7 @@ button{
     margin:0;
 }
 
-.col-sm-6 h3, .col-sm-6 p{
+.pad, .swiper-slide p{
     padding-left:10px;
 }
 
@@ -388,5 +382,28 @@ img{
 
 .funfactimg{height:400px;}
 
+.statimg{height:400px !important; width:680px;}
+
+
 /* swiper-container{display:inline;width:100px !important;} */
 
+
+
+
+.white{background-color: white;}
+.white1{background-color: rgb(255, 255, 255);}
+
+.margin-up{margin-top:60px !important;}
+.padding-up{padding-top:40px !important;}
+
+.statss{
+    padding-bottom:20px;
+}
+
+.swiper-slide p{
+    width:80%;
+    margin:auto;
+}
+.swiper-slide img{margin-left:84px;}
+
+footer{color:white;}

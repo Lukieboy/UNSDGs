@@ -1,209 +1,3 @@
-// creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-// function drawChart() {
-// let info=[
-//     ['Country', 'Fish and Seafood Production(tons)'],
-//     ['Afghanistan', 10100],
-//     ['Albania', 12690],
-//     ['Algeria', 104880],
-//     ['Angola', 411190],
-//     ['Antigua and Barbuda', 3170],
-//     ['Argentina', 828690],
-//     ['Armenia', 18270],
-//     ['Australia', 261000],
-//     ['Austria', 4600],
-//     ['Azerbaijan', 1680],
-//     ['Bahamas', 11420],
-//     ['Bahrain', 15000],
-//     ['Bangladesh', 4384220],
-//     ['Barbados', 1480],
-//     ['Belarus', 11130],
-//     ['Belgium', 24720],
-//     ['Belize', 121690],
-//     ['Benin', 52730],
-//     ['Bhutan', 220],
-//     ['Bolivia', 11430],
-//     ['Bosnia and Herzegovina', 4260],
-//     ['Botswana', 70],
-//     ['Brazil', 1309880],
-//     ['Bulgaria', 24310],
-//     ['Burkina Faso', 25210],
-//     ['Burundi', 21930],
-//     ['Cambodia', 967100],
-//     ['Cameroon', 299450],
-//     ['Canada', 945230],
-//     ['Cape Verde', 18670],
-//     ['Central African Republic', 29140],
-//     ['Chad', 107090],
-//     ['Chile', 3356460],
-//     ['China', 63410780],
-//     ['Colombia', 272430],
-//     ['Comoros', 17020],
-//     ['CG', 71080],
-//     ['Costa Rica', 35570],
-//     ["CI", 113140],
-//     ['Croatia', 86050],
-//     ['Cuba', 45600],
-//     ['Cyprus', 9580],
-//     ['CZ', 24710],
-//     ['CD', 241300],
-//     ['Denmark', 942060],
-//     ['Djibouti', 2020],
-//     ['Dominica', 790],
-//     ['Dominican Republic', 17040],
-//     ['Ecuador', 1112710],
-//     ['Egypt', 2038990],
-//     ['El Salvador', 400],
-//     ['Estonia', 83660],
-//     ['SZ', 170],
-//     ['Ethiopia', 59430],
-//     ['Fiji', 47360],
-//     ['Finland', 204980],
-//     ['France', 676610],
-//     ['French Polynesia', 13740],
-//     ['Gabon', 29050],
-//     ['Gambia', 56230],
-//     ['Georgia', 254200],
-//     ['Germany', 284220],
-//     ['Ghana', 445350],
-//     ['Greece', 211850],
-//     ['Grenada', 2630],
-//     ['Guatemala', 43050],
-//     ['Guinea', 130250],
-//     ['Guinea-Bissau', 6730],
-//     ['Guyana', 43670],
-//     ['Haiti', 17910],
-//     ['Honduras', 72100],
-//     ['Honk Kong', 126720],
-//     ['Hungary', 23860],
-//     ['Iceland', 1184160],
-//     ['India', 13249700],
-//     ['Indonesia', 13429330],
-//     ['Iran', 1284840],
-//     ['Iraq', 62340],
-//     ['Ireland', 292220],
-//     ['Israel', 19040],
-//     ['Italy', 327740],
-//     ['Jamaica', 17360],
-//     ['Japan', 3819400],
-//     ['Jordan', 1760],
-//     ['Kazakhstan', 32720.002],
-//     ['Kenya', 134570],
-//     ['Kiribati', 161140],
-//     ['Kuwait', 4330],
-//     ['Kyrgyzstan', 2190],
-//     ['Laos', 174900],
-//     ['Latvia', 118950],
-//     ['Lebanon', 4640],
-//     ['Lesotho', 2650],
-//     ['Liberia', 16820],
-//     ['Libya', 32009.998],
-//     ['Lithuania', 93510],
-//     ['Luxembourg', 0],
-//     ['Macao', 1500],
-//     ['Madagascar', 119320],
-//     ['Malawi', 163180],
-//     ['Malaysia', 1685190],
-//     ['Maldives', 143260],
-//     ['Mali', 110140],
-//     ['Malta', 6270],
-//     ['Mauritania', 794580],
-//     ['Mauritius', 26240],
-//     ['Melanesia', 382040],
-//     ['Mexico', 1824590],
-//     ['Micronesia', 378820],
-//     ['Moldova', 12130],
-//     ['Mongolia', 20],
-//     ['Montenegro', 2350],
-//     ['Morocco', 1459520],
-//     ['Mozambique', 394680],
-//     ['Myanmar', 3199090],
-//     ['Namibia', 501780],
-//     ['Nauru', 33500],
-//     ['Nepal', 92250],
-//     ['Netherlands', 562590],
-//     ['NC', 5120],
-//     ['New Zealand', 525880],
-//     ['Nicaragua', 75830],
-//     ['Niger', 34930],
-//     ['Nigeria', 1114560],
-//     ['North Korea', 280760],
-//     ['MK', 1600],
-//     ['Norway', 3676920],
-//     ['Oceania', 1572340],
-//     ['Oman', 347620],
-//     ['Pakistan', 679450],
-//     ['Panama', 153570],
-//     ['Papua New Guinea', 248340],
-//     ['Paraguay', 24180],
-//     ['Peru', 4968960],
-//     ['Philippines', 2871960],
-//     ['Poland', 265200],
-//     ['Polynesia', 24610],
-//     ['Portugal', 197630],
-//     ['Qatar', 15370],
-//     ['Romania', 27800],
-//     ['Russia', 5211880],
-//     ['Rwanda', 24760],
-//     ['Saint Kitts and Nevis', 85460],
-//     ['Saint Lucia', 2100],
-//     ['Saint Vincent and the Grenadines', 32910],
-//     ['Samoa', 10860],
-//     ['Sao Tome and Principe', 10810],
-//     ['Saudi Arabia', 142910],
-//     ['Senegal', 514490],
-//     ['Serbia', 9350],
-//     ['Seychelles', 136180],
-//     ['Sierra Leone', 202190],
-//     ['Slovakia', 4550],
-//     ['Slovenia', 2420],
-//     ['Solomon Islands', 56420],
-//     ['South Africa', 452870],
-//     ['South Korea', 1951840],
-//     ['SS', 32020],
-//     ['Spain', 1187830],
-//     ['Sri Lanka', 539670],
-//     ['Sudan', 50820],
-//     ['Suriname', 47090],
-//     ['Sweden', 247430],
-//     ['Switzerland', 3430],
-//     ['Syria', 6340],
-//     ['Taiwan', 1040870],
-//     ['Tajikistan', 2450],
-//     ['Tanzania', 434210],
-//     ['Thailand', 2506730],
-//     ['TL', 3350],
-//     ['Togo', 27050],
-//     ['Trinidad and Tobago', 12910],
-//     ['Tunisia', 130720],
-//     ['Turkey', 831660],
-//     ['Turkmenistan', 15050],
-//     ['Uganda', 706170],
-//     ['Ukraine', 101810],
-//     ['United Arab Emirates', 76250],
-//     ['United Kingdom', 846800],
-//     ['United States', 5349930],
-//     ['Uruguay', 61940],
-//     ['Uzbekistan', 301530],
-//     ['Vanuatu', 500],
-//     ['Venezuela', 600],
-//     ['Vietnam', 7871290],
-//     ['Yemen', 131290],
-//     ['Zambia', 135940],
-//     ['Zimbabwe', 29230],
-//     ];
-// var data = google.visualization.arrayToDataTable(info);
-
-// var options = {
-//     colorAxis: {values: [0, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000], colors: ['white', '#a7bfe8', '#7aa3eb' ,'#5b90eb','#427feb', '#2f74ed' ,'#246ded', '#0558eb'],},
-//     backgroundColor: 'none',
-//     datalessRegionColor: 'gray'
-// };
-// var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-// chart.draw(data, options);
-// }
-
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 var year=0;
@@ -2901,7 +2695,6 @@ function mapp(){
         ["Norway", 41200000]
       ];
     
-
     if(slider.value-1==5*0){
         var data = google.visualization.arrayToDataTable(info1900);
     }else if(slider.value-1==5*1){
@@ -2946,11 +2739,14 @@ slider.addEventListener('input',(event)=>{
     mapp();
 });
 
+let totalghg=document.querySelector(".totalghg")
+
 setInterval(()=>{
     console.log(slider.value);
 
     if(slider.value-1==0){
         output.innerHTML = 1900;
+        totalghg.innerHTML="1923 GT";
     }else if(slider.value-1==5){
         output.innerHTML = 1920;
     }else if(slider.value-1==10){
@@ -2989,3 +2785,326 @@ setTimeout(()=>{
 
 
 
+
+
+
+
+
+
+////FUN FACT SECTION:
+let funfact = document.querySelector('.funfact');
+let funfactimg = document.querySelector('.funfactimg');
+let generate = document.querySelector('.generate');
+let learn = document.querySelector('.learnmore');
+
+let facts=[
+    [
+      "Did you know that deforestation contributes to climate change? It contributes to about 12-20% of total Greenhouse Gas Emissions (GHG).",
+      "https://sentientmedia.org/wp-content/uploads/2022/07/Madagascar_Deforestation.jpg",
+      "https://www.worldwildlife.org/threats/deforestation"
+    ],
+    [
+      "Ocean acidification is a direct result of increased carbon dioxide emissions. Ocean acidification is extremely harmful to life below water.",
+      "https://www.whoi.edu/wp-content/uploads/2018/01/1280Fig_1_482893-1200x676.jpg",
+      "https://ocean.si.edu/planet-ocean/ocean-life/ocean-acidification"
+    ],
+    [
+      "Melting glaciers can lead to rising sea levels, which poses a threat to coastal areas.",
+      "https://i.cbc.ca/1.3361399.1572904152!/fileImage/httpImage/wedgemount-glacier.jpg",
+      "https://www.nationalgeographic.org/encyclopedia/glacier/"
+    ],
+    [
+      "The burning of fossil fuels releases greenhouse gases, which are the largest contributer to climate change, accounting for about 75% of Greehosue Gas Emissions and 90% of all Carbon Dioxide Emissions.",
+      "https://cdn.britannica.com/78/148078-050-79D05CB8/Coal-power-plant-Wyoming-Rock-Springs.jpg",
+      "https://www.climate.gov/news-features/understanding-climate/climate-change-fossil-fuels"
+    ],
+    [
+      "Climate change can affects biodiversity, and is causing many species to go extinct.",
+      "https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3Adf3c4dee31a3d227671d7092ab3f9deb01893a10e0b30033dc24cdba%2BIMAGE_TINY%2BIMAGE_TINY.1",
+      "https://www.worldwildlife.org/threats/effects-of-climate-change"
+    ],
+    [
+      "Extreme weather events, such as hurricanes and heatwaves, are becoming much more frequent due to climate change",
+      "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_39/3002201/190909-abaco-dorian-mc-10072.JPG",
+      "https://www.nationalgeographic.org/encyclopedia/extreme-weather/"
+    ],
+    [
+      "The rise in the average temperature of the earth can disturb agriculture and food production.",
+      "https://www.ucsusa.org/sites/default/files/styles/original/public/images/1200-corndrought.jpg?itok=EAJuxQvZ",
+      "https://agriculture.canada.ca/en/environment/climate-scenarios-agriculture"
+    ]
+  
+];
+let factnum=0;
+
+function createFact(num){
+    funfact.innerHTML = facts[num][0];
+    funfactimg.src = facts[num][1];
+    learn.setAttribute("href", facts[num][2]);
+}
+createFact(0);
+
+generate.addEventListener('click', ()=>{
+    let random = Math.floor(Math.random()*7);
+    if(random != factnum){
+        createFact(random);
+        factnum=random;
+    }else{
+        if(random==2){random=0;}
+        createFact(random+1);
+        factnum=random+1;
+    }
+})
+
+
+
+var news = document.getElementById("no1");
+var alum = document.getElementById("no2");
+
+
+function calculateCarbonFootprint() {
+  var elec = parseInt(document.getElementById("elec").value);
+  var gas = parseInt(document.getElementById("gas").value);
+  var oil = parseInt(document.getElementById("oil").value);
+  var miles = parseInt(document.getElementById("miles").value);
+  var plane1 = parseInt(document.getElementById("plane1").value);
+  var plane2 = parseInt(document.getElementById("plane2").value);
+
+  console.log(news.checked);
+
+  if(isNaN(elec)){elec=0;}
+  if(isNaN(gas)){gas=0;}
+  if(isNaN(oil)){oil=0;}
+  if(isNaN(miles)){miles=0;}
+  if(isNaN(plane1)){plane1=0;}
+  if(isNaN(plane2)){plane2=0;}
+//in pounds
+var total=0;
+var final=0
+
+total = elec*105 +gas*105 +oil*113 + miles *0.79+ plane1*1100 + plane2*4400;
+if(news.checked){total+=184;}
+if(alum.checked){total+=166;}
+final = (total).toFixed(2);
+// console.log(elec*105);
+// console.log(gas*105);
+// console.log(oil*105);
+// console.log(miles*0.79);
+// console.log(plane1*1100);
+// console.log(plane2*4400);
+
+
+// Display the result to the user
+document.getElementById("result").innerHTML = ' <h2>Results:</h2>';
+  document.getElementById("result").innerHTML += "Your score is " + final + ". This is about " + (final/2205).toFixed(2)+" tons of CO2. The Carbon Footprint of and average American is somewhere between 16000-22000.";
+  document.getElementById("result").innerHTML+="<br> Your Carbon Footprint is " + (final/2205/16).toFixed(1) + " times the average in the U.S. and " + (final/2205/4).toFixed(1) + " times the worldwide average.";
+  document.getElementById("result").innerHTML+=`<br> Want to lower your Carbon Footprint? Learn more <a href="  https://justenergy.com/blog/earth-day-is-every-day-reducing-your-carbon-footprint-year-round/" target="blank">here.</a>`
+}
+
+document.querySelector(".calculate").addEventListener('click', ()=>{
+  calculateCarbonFootprint();
+  console.log("wha");
+});
+
+
+
+
+
+
+
+const body = document.querySelector('body');
+const questionContent = document.querySelector('.questionContent');
+const questionContainer = document.querySelector('.question-container');
+const op1 = document.querySelector('.option1');
+const op2 = document.querySelector('.option2');
+const op3 = document.querySelector('.option3');
+const op4 = document.querySelector('.option4');
+let chosen = 0;
+const submit = document.querySelector('.question-submit');
+const next = document.querySelector('.next');
+let questionNumber=0;
+let firstry=0;
+
+
+let list = [
+  [
+    "Which gas is primarily responsible for causing global warming?",
+    "Carbon Dioxide",
+    "Oxygen",
+    "Nitrogen",
+    "Methane",
+    1
+  ],
+  [
+    "What is the main source of human-generated carbon dioxide emissions?",
+    "Transportation",
+    "Electricity generation",
+    "Deforestation",
+    "Industrial processes",
+    2
+  ],
+  [
+    "Which of the following is a renewable source of energy?",
+    "Coal",
+    "Natural Gas",
+    "Nuclear",
+    "Solar",
+    4
+  ],
+  [
+    "What is the term for the gradual increase in the Earth's average temperature due to human activities?",
+    "Global Warming",
+    "Climate Change",
+    "Ozone Depletion",
+    "Acid Rain",
+    2
+  ],
+  [
+    "What is the main cause of sea-level rise?",
+    "Melting glaciers",
+    "Thermal expansion of seawater",
+    "Icebergs melting",
+    "Increased precipitation",
+    2
+  ],
+  [
+    "What is the largest contributor to deforestation worldwide?",
+    "Agriculture",
+    "Mining",
+    "Urbanization",
+    "Logging",
+    1
+  ],
+  [
+    "Which sector contributes the most to greenhouse gas emissions?",
+    "Agriculture",
+    "Industry",
+    "Transportation",
+    "Buildings",
+    3
+  ],
+  [
+    "What is the phenomenon where warmer temperatures trap pollutants near the Earth's surface?",
+    "Smog",
+    "Haze",
+    "Fog",
+    "Mist",
+    1
+  ],
+  [
+    "Which country is the largest emitter of carbon dioxide globally?",
+    "China",
+    "United States",
+    "India",
+    "Russia",
+    1
+  ],
+  [
+    "What is the term for the loss of a species from a particular habitat or from the entire planet?",
+    "Extinction",
+    "Endangerment",
+    "Habitat degradation",
+    "Biodiversity loss",
+    1
+  ],
+];
+
+
+function runQuestion(num){
+  questionContent.innerHTML = " "+ list[num][0];
+  op1.innerHTML = list[num][1];
+  op2.innerHTML = list[num][2];
+  op3.innerHTML = list[num][3];
+  op4.innerHTML = list[num][4];
+  questionContainer.style.background="rgba(95, 95, 192, 0.372)";
+  document.querySelector(".msg").innerHTML="";
+  chosen=-45;
+  resetColor();
+
+}
+
+function resetColor(){
+  op1.style.backgroundColor="rgba(218, 218, 255, 0.372)";
+  op2.style.backgroundColor="rgba(218, 218, 255, 0.372)";
+  op3.style.backgroundColor="rgba(218, 218, 255, 0.372)";
+  op4.style.backgroundColor="rgba(218, 218, 255, 0.372)";
+}
+
+function finish(){
+  document.querySelector(".finish").style.display="block";
+  document.querySelector(".finish").innerHTML = `
+<h1>Great Job! You Finished!</h1><br>
+<p>You got ${firstry} out of 7 questions right on the first try!</p>
+<button class="bttn-fill bttn-md bttn-primary retry">Try Again</button>`;
+  questionContainer.style.display="none";
+  document.querySelector(".retry").addEventListener('click', ()=>{
+    questionContainer.style.display="block";
+    document.querySelector(".finish").style.display="none";
+    runQuestion(0);
+  });
+
+console.log(firstry);
+}
+
+
+op1.addEventListener('click', ()=>{
+  resetColor();
+  op1.style.backgroundColor="rgb(168, 254, 234)";
+  chosen=1;
+})
+
+op2.addEventListener('click', ()=>{
+  resetColor();
+  op2.style.backgroundColor="rgb(168, 254, 234)";
+  chosen=2;
+})
+
+op3.addEventListener('click', ()=>{
+  resetColor();
+  op3.style.backgroundColor="rgb(168, 254, 234)";
+  chosen=3;
+})
+op4.addEventListener('click', ()=>{
+  resetColor();
+  op4.style.backgroundColor="rgb(168, 254, 234)";
+  chosen=4;
+})
+
+runQuestion(0);
+
+let good=false;
+let tries=0;
+
+submit.addEventListener('click', ()=>{
+  if(chosen == list[questionNumber][5]){
+      questionContainer.style.background="rgb(24, 110, 50,0.5)";
+      document.querySelector(".msg").innerHTML="That's Correct! Good Job";
+      good=true;
+      if(tries==0){firstry++;}
+  }else{
+      questionContainer.style.background="rgb(110, 24, 33,0.5)";
+      document.querySelector(".msg").innerHTML="Sorry, that was wrong. Please Retry";
+      tries++;
+  }
+})
+
+next.addEventListener('click', ()=>{
+if(good==true){
+  questionNumber++;
+  if(questionNumber==5){finish();}
+  runQuestion(questionNumber);
+  good=false;
+  tries=0;
+}
+})
+
+
+
+
+// Swiper
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

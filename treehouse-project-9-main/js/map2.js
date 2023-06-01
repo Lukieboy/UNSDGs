@@ -169,7 +169,7 @@ google.charts.load('current', {
     ]);
 
     var options = {
-        colorAxis: {values: [0, 0.01, 0.03, 0.1, 0.3, 1, 3, 10], colors: ['white', '#b1e3bb', '#9edeaa' ,'#8cdb9b','#6bcf7e', '#2cd14d' ,'#19cf3d', '#04cf2c'],},
+        colorAxis: {values: [0, 0.01, 0.03, 0.1, 0.3, 1, 3, 10], colors: ['#b1e3bb', '#9edeaa' ,'#8cdb9b','#6bcf7e', '#2cd14d' ,'#19cf3d', '#04cf2c', 'green'],},
         backgroundColor: 'none',
         datalessRegionColor: 'lightgray'
     };

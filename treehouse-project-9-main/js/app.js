@@ -280,11 +280,11 @@ let generate = document.querySelector('.generate');
 let learn = document.querySelector('.learnmore');
 
 let facts=[
-    ["Did you know, 94% of Life exists in the Oean?", "https://i.guim.co.uk/img/media/101f71a27904e48e1f9d42a3551cc44b6ceddb54/63_543_4781_2870/master/4781.jpg?width=1200&quality=85&auto=format&fit=max&s=15b3d077c0386e8ad7ec15ce70dbbc29", "https://oceanservice.noaa.gov/facts/ocean-species.html"],
+    ["Did you know, 94% of Life exists in the Ocean?", "https://i.guim.co.uk/img/media/101f71a27904e48e1f9d42a3551cc44b6ceddb54/63_543_4781_2870/master/4781.jpg?width=1200&quality=85&auto=format&fit=max&s=15b3d077c0386e8ad7ec15ce70dbbc29", "https://oceanservice.noaa.gov/facts/ocean-species.html"],
     ["Did you know, less than 50% of Coral Reefs remain?", "https://images.theconversation.com/files/239870/original/file-20181009-72106-6bsj7z.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop", "https://www.gvicanada.ca/blog/the-worlds-disappearing-underwater-cities-coral-reefs/#:~:text=Why%20are%20coral%20reefs%20disappearing,coral%20reefs%3B%20and%20coastal%20development."],
     ["Did you know, Oceans provide jobs for over 3 billion people who depend on marine biodiversity to live?", "https://media.npr.org/assets/img/2017/11/28/mtk-0014c3a1b5e44c2b7c1cf14a791039ebb4de4878.jpeg", "https://www.ocean.org/education/the-ocean-and-humans-are-connected/"],
     ["Did you know, only 5% of oceans have been explored?", "https://images.encounteredu.com/excited-hare/production/uploads/subject-update-about-exploring-the-deep-hero.jpg?w=1200&h=630&q=82&auto=format&fit=crop&dm=1631569543&s=48f275c76c565fdaa5d4bd365246afd3",    "https://oceanexplorer.noaa.gov/"],
-    ["Did you know, oceans provide over HALF of the oxyge we breathe?", "https://oceanservice.noaa.gov/facts/ocean-surface-960.jpg",   "https://oceanservice.noaa.gov/facts/ocean-oxygen.html#:~:text=Scientists%20estimate%20that%20roughly%20half,smallest%20photosynthetic%20organism%20on%20Earth."],
+    ["Did you know, oceans provide over HALF of the oxygen we breathe?", "https://oceanservice.noaa.gov/facts/ocean-surface-960.jpg",   "https://oceanservice.noaa.gov/facts/ocean-oxygen.html#:~:text=Scientists%20estimate%20that%20roughly%20half,smallest%20photosynthetic%20organism%20on%20Earth."],
     ["Did you know, the average depth of the ocean is 12,000 feet?", "https://hips.hearstapps.com/hmg-prod/images/rays-of-sunlight-into-the-underwater-cave-royalty-free-image-1665512420.jpg",    "https://oceanservice.noaa.gov/facts/oceandepth.html"],
     ["Did you know, scientist predict that by 2040, more than half of the polar bear population will be spending over a quarter of their life on land?", "https://www.wwf.org.uk/sites/default/files/styles/hero_m/public/2016-09/Medium_WW215268.jpg?h=fed0e6e9&itok=24XMsKvU",     "https://www.worldwildlife.org/species/polar-bear"],
     ["Did you know, the longest mountain range in the world is the Mid-Oceanic Ridge. It is an underwater mountain chain that stretches over 56,000km?", "https://www.marineinsight.com/wp-content/uploads/2019/05/Mid-Ocean-Ridge.png",    "https://oceanexplorer.noaa.gov/facts/mid-ocean-ridge.html"],
@@ -412,7 +412,7 @@ new Chart(document.getElementById("chart"), {
           label: "Pollution (millions of tonnes)",
           data: Pollution,
           borderColor: 'rgb(177,227,187)',
-          backgroundColor: 'rgb(177,227,187,0.2)',
+          backgroundColor: 'rgb(177,227,187,0.6)',
 
         }
       ]
@@ -504,6 +504,15 @@ map.addEventListener('click', ()=>{
 map.click();
 
 
+
+
+// Swiper
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 
 
@@ -700,25 +709,31 @@ function barGraph(){
         data: [36.2, 20.8, 11.9, 8.1, 6.7, 6.2, 5.8, 5.5, 5.5, 5.4, 5.4, 4.7],
         backgroundColor: [
           'rgba(0, 99, 132, 0.6)',
-          'rgba(30, 99, 132, 0.6)',
+          'rgba(20, 99, 132, 0.6)',
+          'rgba(40, 99, 132, 0.6)',
           'rgba(60, 99, 132, 0.6)',
-          'rgba(90, 99, 132, 0.6)',
+          'rgba(80, 99, 132, 0.6)',
+          'rgba(100, 99, 132, 0.6)',
           'rgba(120, 99, 132, 0.6)',
-          'rgba(150, 99, 132, 0.6)',
+          'rgba(140, 99, 132, 0.6)',
+          'rgba(160, 99, 132, 0.6)',
           'rgba(180, 99, 132, 0.6)',
-          'rgba(210, 99, 132, 0.6)',
-          'rgba(240, 99, 132, 0.6)'
+          'rgba(200, 99, 132, 0.6)',
+          'rgba(220, 99, 132, 0.6)'
         ],
         borderColor: [
           'rgba(0, 99, 132, 1)',
-          'rgba(30, 99, 132, 1)',
+          'rgba(20, 99, 132, 1)',
+          'rgba(40, 99, 132, 1)',
           'rgba(60, 99, 132, 1)',
-          'rgba(90, 99, 132, 1)',
+          'rgba(80, 99, 132, 1)',
+          'rgba(100, 99, 132, 1)',
           'rgba(120, 99, 132, 1)',
-          'rgba(150, 99, 132, 1)',
+          'rgba(140, 99, 132, 1)',
+          'rgba(160, 99, 132, 1)',
           'rgba(180, 99, 132, 1)',
-          'rgba(210, 99, 132, 1)',
-          'rgba(240, 99, 132, 1)'
+          'rgba(200, 99, 132, 1)',
+          'rgba(220, 99, 132, 1)'
         ],
         borderWidth: 2,
         hoverBorderWidth: 0
@@ -773,7 +788,7 @@ map2.addEventListener('click', ()=>{
     realmap.style.display="block";
     aquaspot.style.display="none";
     barspot.style.display="none";
-    title2.innerHTML="Fish and Seafood Production by country(2020)";
+    title2.innerHTML="Fish and Seafood Production by country (2020)";
     // subtitle.innerHTML="Data from Our World in Data, 2020. This is an annual estimate of plastic emissions. A country's total does not include the waste that is exported overseas and that may be at higher risk of entering the ocean.";
 });
 map2.click();
